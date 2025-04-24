@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+    <head>  
+        <title>KRUSHIMITRA</title>
+        <style>
+            /*Header CSS*/
+
+             *{
+                 margin:0;
+                 padding: 0;   
+                 font-family: 'Poppins', sans-serif;
+                 scroll-behavior: smooth;
+                 list-style: none;
+                 text-decoration: none;
+                 
+              }
+              .head{
+                 background-color:#1392e1;
+                 display:flex;
+                 flex-direction:row;
+                 background-size: cover;
+                 color:white;
+                 font-size:16px;
+                 font-family:candara;
+                 text-align: center;
+                 padding:8px 8px;
+                 height:18px;
+                 margin-top:2px ;
+                 word-spacing: 3px;
+                 font-weight:normal;
+                 }
+              header{
+                 position:fixed;
+                 width: 100%;
+                 top:0;
+                 padding: 0.5rem 0%;
+                 right:0;
+                 z-index: 1000;
+                 display: flex;
+                 align-items: center;
+                 justify-content:space-around;
+                 background:white;
+                 box-shadow:0 5px 10px rgba(0,0,0,0.06);
+                 /*padding: 10px 0.1%;*/
+              }
+              .logo img{
+                 height: 90px;
+                 width:90px;
+              }
+              .navmenu{
+                 display:flex;
+              }
+              .navmenu a{
+                 color: #2c2c2c;
+                 font-size: 16px;
+                 text-transform: capitalize;
+                 padding: 7px 20px;
+                 font-weight: 400;
+                 transition: all .42s ease;
+              }
+              .navmenu a:hover{
+                 color:rgba(24, 56, 198, 0.816);
+              }
+              .nav-icon{
+                 display: flex;
+                 align-items: center;
+              }
+              .nav-icon i{
+                 margin-right: 20px;
+                 color: #2c2c2c;
+                 font-size: 22px;
+                 font-weight: 400;
+                 transition: all .42s ease;
+              }
+              .nav-icon i:hover{
+                 transform: scale(1.1);
+                 color: rgba(24, 56, 198, 0.816);
+              }
+
+              /*main page CSS */
+              section{
+               padding:3% 5.8%;
+              }
+              .main-home{
+               width:88%;
+               height:72.8vh;
+               background-image:url("1.jpg");
+               background-position: 70%;
+               background-size:cover;
+               display: grid;
+               grid-template-columns: repeat(1.1fr);
+               align-items:center;
+              }
+              .main-text .hfour{
+               color: rgb(237, 10, 17);
+               font-size: 16px;
+               text-transform: capitalize;
+               font-weight: 500;
+              }
+              .main-text .hone{
+               color: white;
+               font-size: 30px;
+               text-transform: capitalize;
+               line-height: 1.1;
+               font-weight: 600;
+               margin: 6px 0 10px;
+            }
+              .main-btn{
+               display: inline-block;
+               color: white;
+               font-size: 16px;
+               border: 2px solid white;
+               
+               padding: 11px 20px;
+               transition: all .42s ease;
+               border-radius: 7px;
+               cursor:pointer;
+              }
+              .offers {
+    padding: 10px 5% 20px;
+    background: #fcfcffce;
+}
+
+.offer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 0.90rem;
+    margin-top: 15px;
+}
+
+.offers .offer-content .row {
+    height: auto; /* Adjusts height dynamically */
+    padding: 16px;
+    display: flex;
+    flex-direction: column; /* Centers text vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #94C973;
+    overflow: hidden;
+}
+
+.offers .offer-content .row i {
+    font-size: 24px; /* Adjust icon size */
+    color: #090c71;
+    margin-bottom: 5px; /* Adds spacing between icon and text */
+}
+
+.offers .offer-content .row h3 {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.offers .offer-content .row p {
+    font-size: small;
+}
+              .timer{
+               display:grid;
+               grid-template-columns: 80% 20%;
+              }
+              .first_section .content{
+               display:flex;
+               width:80%;
+           
+              }
+              .first_section .content div{
+               flex-basis: 80px;
+               
+              }
+              .first_section .content div p{
+               font-size: 17px;
+               margin-bottom: -4px;
+              }
+              .first_section .content div span{
+               font-size: 10px;
+              }
+              .first_section .content1{
+               display:inline;
+              }
+              .first_section .content1 .a41_top img{
+               box-shadow: 10px 10px 5px rgba(213, 210, 210, 0.712);
+              }
+
+              .first_section .content1 .a41_top img:hover{
+              /* border: 2px solid black;*/
+               box-shadow: 10px 10px 5px rgba(179, 176, 176, 0.834);
+               border:1px solid #ddd;
+               box-shadow:0 0 5px rgba(0,0,0,0.2);
+               cursor:pointer;
+              }
+
+              .first_section .content1 .a41_top .a41_top1{
+               display:grid;
+               margin-top: 10px;
+               grid-template-columns: 25% 25% 25% 25% 25%;
+              }
+              .first_section .content1 .a41_top .a41_top2{
+               display:grid;
+               margin-top: 10px;
+               grid-template-columns: 25% 25% 25% 25% 25%;
+              }
+              .first_section .content1 .a41_top .a41_top3{
+               display:grid;
+               margin-top: 10px;
+               grid-template-columns: 25% 25% 25% 25%;
+              } 
+
+            
+              .first_section .content1 .a42_cate2{
+               display:grid;
+               margin-top: 10px;
+               grid-template-columns: 48% 48%;
+               column-gap: 20px;
+              }
+              .first_section .content1 .a42_cate2 .x{
+               width:100%;
+               height:30vh;
+               margin-top: 20px;
+               background-image:linear-gradient(rgba(242, 243, 247, 0.581),rgba(181, 242, 203, 0.581)),url("1.jpg");
+               background-size:cover;
+              
+              }
+              .first_section .content1 .a42_cate2 .y{
+               width:100%;
+               height:30vh;
+               margin-top: 20px;
+               background-image:linear-gradient(rgba(242, 243, 247, 0.581),rgba(181, 242, 203, 0.581)),url("1.jpg");
+               background-size:cover;
+              }
+              .first_section .content1 .a42_cate2 .txtx{
+               padding-left: 10px;
+               padding-top: 17px;
+              }
+
+              .first_section .content1 .a42_cate2 .two_btnx{
+               display: inline-block;
+               color: rgb(23, 83, 23);
+               font-size: 14px;
+               border: 2px solid rgb(10, 17, 10);
+               padding: 5px 5px;
+               transition: all .42s ease;
+               border-radius: 4px;
+               cursor:pointer;
+              }
+              .first_section .content1 .a42_cate2 .x:hover{
+               border: 2px solid #ddd;
+               box-shadow: 0 0 5px rgba(0,0,0,0.2);
+               cursor:pointer;
+              }
+              .first_section .content1 .a42_cate2 .y:hover{
+               border: 2px solid #ddd;
+               box-shadow: 0 0 5px rgba(0,0,0,0.2);
+               cursor:pointer;
+              }
+              .problemdefination {
+   width: 50%;
+   display: flex;
+   justify-content: center; /* Center the image properly */
+   align-items: center;
+}
+
+.problemdefination img {
+   max-width: 100%;
+   max-height: 100%;
+   height: auto;
+   object-fit: contain; /* Ensures the image fully fits inside its container */
+   display: block;
+}
+
+.problemdefination1 {
+   width: 50%;
+   padding-left: 20px; /* Space between image and text */
+}
+
+.problemdefination1 h1 {
+   color: #093992e7;
+   font-family: "Lucida Fax";
+   font-size: 29px;
+}
+
+.problemdefination1 p {
+   color: rgb(6, 72, 171);
+   font-family: Calibri;
+   font-size: 20px;
+}
+
+.last1 {
+   width: 76%;
+   height: 50.55vh;
+   margin-top: 10px;
+   background-image: linear-gradient(rgba(223, 224, 227, 0.312), rgba(223, 224, 227, 0.312)), url("background.avif");
+   background-size: cover;
+   margin-left: 82px;
+   margin-right: 25px;
+    
+}
+ 
+
+.last1 .txt11 {
+   padding: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: nowrap; /* Prevents wrapping */
+}
+.scopeofproject {
+   width: 50%;
+   display: flex;
+   justify-content: center; /* Center the image properly */
+   align-items: center;
+}
+
+.scopeofproject img {
+   max-width: 100%;
+   max-height: 100%;
+   height: auto;
+   object-fit: contain; /* Ensures the image fully fits inside its container */
+   display: block;
+}
+
+.scopeofproject1 {
+   width: 50%;
+   padding-left: 20px; /* Space between image and text */
+}
+
+.scopeofproject1 h1 {
+   color: #093992e7;
+   font-family: "Lucida Fax";
+   font-size: 29px;
+}
+
+.scopeofproject1 p {
+   color: rgb(6, 72, 171);
+   font-family: Calibri;
+   font-size: 20px;
+}
+
+.last2{
+   width: 76%;
+   height: 50.55vh;
+   margin-top: 10px;
+   background-image: linear-gradient(rgba(223, 224, 227, 0.312), rgba(223, 224, 227, 0.312)), url("background.avif");
+   background-size: cover;
+   margin-left: 82px;
+   margin-right: 25px;
+  
+}
+
+.last2 .txt12 {
+   padding: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: nowrap; /* Prevents wrapping */
+}
+              
+.advantages {
+   width: 50%;
+   display: flex;
+   justify-content: center; /* Center the image properly */
+   align-items: center;
+}
+
+.advantages img {
+   max-width: 100%;
+   max-height: 50%;
+   height: 50%;
+   object-fit: contain; /* Ensures the image fully fits inside its container */
+   display: block;
+}
+
+.advantages1 {
+   width: 50%;
+   padding-left: 20px; /* Space between image and text */
+}
+
+.advantages1 h1 {
+   color: #093992e7;
+   font-family: "Lucida Fax";
+   font-size: 29px;
+}
+
+.advantages1 p {
+   color: rgb(6, 72, 171);
+   font-family: Calibri;
+   font-size: 20px;
+}
+
+.last3 {
+   width: 76%;
+   height: 50%;
+   margin-top: 10px;
+   background-image: linear-gradient(rgba(223, 224, 227, 0.312), rgba(223, 224, 227, 0.312)), url("background.avif");
+   background-size: cover;
+   margin-left: 82px;
+   margin-right: 25px;
+}
+
+.last3 .txt13 {
+   padding: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+.disadvantages {
+   width: 50%;
+   display: flex;
+   justify-content: center; /* Center the image properly */
+   align-items: center;
+}
+
+.disadvantages img {
+   max-width: 100%;
+   max-height: 100%;
+   height: auto;
+   object-fit: contain; /* Ensures the image fully fits inside its container */
+   display: block;
+}
+
+.disadvantages1 {
+   width: 50%;
+   padding-left: 20px; /* Space between image and text */
+}
+
+.disadvantages1 h1 {
+   color: #093992e7;
+   font-family: "Lucida Fax";
+   font-size: 29px;
+}
+
+.disadvantages1 p {
+   color: rgb(6, 72, 171);
+   font-family: Calibri;
+   font-size: 20px;
+}
+
+.last4{
+   width: 76%;
+   height: 50.55vh;
+   margin-top: 10px;
+   background-image: linear-gradient(rgba(223, 224, 227, 0.312), rgba(223, 224, 227, 0.312)), url("background.avif");
+   background-size: cover;
+   margin-left: 82px;
+   margin-right: 25px;
+  
+}
+
+.last4 .txt14 {
+   padding: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+.future{
+   width: 50%;
+   display: flex;
+   justify-content: center; /* Center the image properly */
+   align-items: center;
+}
+
+.future img {
+   max-width: 100%;
+   max-height: 100%;
+   height: auto;
+   object-fit: contain; /* Ensures the image fully fits inside its container */
+   display: block;
+}
+
+.future1 {
+   width: 50%;
+   padding-left: 20px; /* Space between image and text */
+}
+
+.future1 h1 {
+   color: #093992e7;
+   font-family: "Lucida Fax";
+   font-size: 29px;
+}
+
+.future1 p {
+   color: rgb(6, 72, 171);
+   font-family: Calibri;
+   font-size: 20px;
+}
+
+.last5{
+   width: 76%;
+   height: 50.55vh;
+   margin-top: 10px;
+   background-image: linear-gradient(rgba(223, 224, 227, 0.312), rgba(223, 224, 227, 0.312)), url("background.avif");
+   background-size: cover;
+   margin-left: 82px;
+   margin-right: 25px;
+  
+}
+
+.last5 .txt15 {
+   padding: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+              
+              
+            /*Footer CSS*/
+            .footer{
+               margin-top: auto;
+               background-size: cover;
+               background-color: #173206;
+            }
+            .footer .foot1{
+                  color:white;
+             }
+            .footer .foot11{
+               display:grid;
+               grid-template-columns: 32% 32% 32%;
+               column-gap: 15px;
+             }
+
+         </style>
+    </head>
+        <body>
+    <h1 class="head"><marquee direction="right" scrollamount="8" behavior="alternate">Something you love is now on sale! &nbsp <a href=".."><b>Buy Now!</b></a></marquee></h1><br><br>
+    <!--Header section-->
+    <header>
+        <a href="#" class="logo"><img src="logo (2).png"></a>
+        
+            <ul class="navmenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="FarmerSchemes.html">Govt.Schemes</a></li>
+                <li><a href="Loans&Subsides.html">Loans & subsides</a></li>
+                <li><a href="MarketPrice.html">Market Price</a></li>
+                <li><a href="support$helpline.html">Support & Helpline</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                
+            </ul>
+            <div class="nav-icon">
+                <a href="#"><i class='bx bx-bookmark'></i> </a>
+                <a href="http://localhost/The%20squad/shop.php"><i class='bx bx-cart' ></i> </a>
+                <a href="http://localhost/The%20squad/loginpage.php"><i class='bx bx-user' ></i> </a>
+            </div>
+        </header><br>
+    <!--Header section End-->
+    <!--page1 start-->
+         <section class="main-home">
+            <div class="main-text">
+               <h1 class="hone">KRUSHI MITRA<br>FARM SMART, GROW BETTER..!</h1>
+                  <hr style="color:white;height:4px; width:10%; padding-top:1px; background-color:white background" ><br>
+                  <div class="main-btn">
+                     <a href="signup.html">Log in</a>
+                  </div>
+            </div>
+          <!--<div class="main-text1">
+               <h4 class="h">Exclusive offer<b> 30% Off</b></h4>
+               <h1 class="hone">STAY HOME & DELIVERED YOUR<BR>DAILY NEEDS</h1>
+                  <a href="#" class="main-btn">Shop Now<i class='bx bxs-right-arrow-alt'></i></a>
+            </div>-->
+         </section>
+     <!--page1 end-->
+     <!--offers-->
+     <section class="offers">
+         <div class="offer-content">
+            <div class="row">
+               <i class='bx bxs-truck' style="font-size:30px; padding-left:5px;color: #090c71;"></i>
+               <h3 class="hthree">Free Shipping</h3>
+               <p style="font-size: small; padding-left: 5px;">Free Shipping world wide</p>
+            </div>
+            <div class="row">
+               <i class='bx bx-timer' style="font-size:30px; padding-left:5px;color: #090c71;" ></i>
+               <h3 class="hthree">24 x 7 Service</h3>
+               <p style="font-size: small; padding-left: 5px;">Online Service for 24 x 7</p>
+            </div>
+            <div class="row">
+               <i class='bx bxs-credit-card' style="font-size:30px; padding-left:5px; color: #090c71;"></i>
+               <h3 class="hthree">Online Pay</h3>
+               <p style="font-size: small; padding-left: 5px;">Online payment Available</p>
+            </div>
+         </div>
+         <div class="offer-content">
+            <div class="row">
+               <i class='bx bx-gift'style="font-size:30px; padding-left:5px; color: #090c71;" ></i>
+               <h3 class="hthree">Festival Offer</h3>
+               <p style="font-size: small; padding-left: 5px;">Super sale upto 50% off</p>
+            </div>
+            <div class="row">
+               <i class="fa fa-refresh" aria-hidden="true" style="font-size:30px; padding-left:5px; color: #090c71;"></i>
+               <h3 class="hthree">100% Original</h3>
+               <p style="font-size: small; padding-left: 5px;">100% Money Back</p>
+            </div>
+            <div class="row1">
+               <i class=".." aria-hidden="true"></i>
+               <h3 class="hthree"></h3>
+               <p></p>
+            </div>
+         </div>
+     </section>
+      <!-- End offers-->
+      <!--next page-->
+   <section class="timer">
+      <div class="first_section">
+         
+         <h2 style="color: #007500;">Top Save Today</h2>
+         <div>
+            <hr style="color:#007500;width:11%; padding-top:1px; background-color:#007500;">
+         </div><br>
+         <div>
+            <p style="font-size: 12px;">Don't miss this apportunity at a special discount just for this 2 days.</p>
+         </div><br>
+         <div class="content">
+            <div style="color:#007500;">Expires in:</div>
+            <div>
+               <p id="days" style="color:#000000;">00</p>
+               <span>Days</span>
+            </div>
+            <div>
+               <p id="hours" style="color:black;">00</p>
+               <span>hours</span>
+            </div>
+            <div>
+               <p id="minutes" style="color:black;">00</p>
+               <span>Minutes</span>
+            </div>
+            <div>
+               <p id="seconds" style="color:black;">00</p>
+               <span>Seconds</span>
+            </div>
+         </div>   <br>
+         <div class="content1">
+               <div class="a41_top"><!--3 row-->
+                  <div class="a41_top1"><!--4 columns-->
+                     <div class="s">
+                        <img src="12.jpg" style="size:cover; height:55%; width:45%; padding-left:5px;">
+                        <p>Best Selling Seeds Kit<br> pack of 10</p>
+                      <p style="font-size: 12px; color: green;">275/- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + </p>
+                     </div>
+                     <div class="h">
+                        <img src="4.png" style="size:cover; height:55%; width:50%; padding-left:5px;">
+                        <p>Carrot Non Hybrid<br> (400 Seeds)</p>
+                        <p style="font-size: 12px; color: green;">30/- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + </p>
+                     </div>
+                     <div class="r">
+                        <img src="5.png" style="size:cover; height:55%; width:50%; padding-left:5px;">
+                        <p>Bitter Gourd Green <br>(20 Seeds)</p>
+                       
+                        <p style="font-size: 12px; color: green;">30/- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + </p>
+                     </div>
+                     <div class="u">
+                        <img src="6.png" style="size:cover; height:55%; width:50%; padding-left:5px;">
+                        <p>Beetroot (100 Seeds)</p>
+                       
+                        <p style="font-size: 12px; color:green;">40/- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + </p>
+                     </div>
+                     <div class="s">
+                        <img src="11.png" style="size:contain; height:55%; width:50%; padding-left:5px;">
+                        <p>Bhendi/Okra Non-Hybrid <br>(80 Seeds)</p>
+                       
+                        <p style="font-size: 12px; color:green;">40/- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + </p>
+                     </div>
+                  </div>
+                  <hr style="width: 117%;"><br>
+
+                  <div class="a41_top2"><!--4 columns-->
+                     
+                     <div class="h">
+                        <img src="13.webp" style="size:cover; height:55%; width:50%; padding-left:5px;">
+                        <p>EM-1 Insecticide.</p>
+                        
+                        <p style="font-size: 12px; color:green;">213/- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + </p>
+                     </div>
+                     <div class="r">
+                        <img src="14.webp" style="size:cover; height:55%; width:50%; padding-left:5px;">
+                        <p>Sumiprempt Insecticide</p>
+                        
+                        <p style="font-size: 12px; color: green;">1027/- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + </p>
+                     </div>
+                     <div class="u">
+                        <img src="15.webp" style="size:cover; height:55%; width:50%; padding-left:5px;">
+                        <p>Extra Super Insecticide</p>
+                        
+                        <p style="font-size: 12px; color: green;">133/- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + </p>
+                     </div>
+                     <div class="s">
+                        <img src="16.webp" style="size:cover; height:59%; width:58%; padding-left:5px;">
+                        <p>SHARP INSECTICIDE.</p>
+                        
+                        <p style="font-size: 12px; color: green;">144/- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + </p>
+                     </div>
+                     <div class="h">
+                        <img src="17.webp" style="size:cover; height:59%; width:53%; padding-left:5px;">
+                        <p>SHARP INSECTICIDE</p>
+                        
+                        <p style="font-size: 12px; color:green;">167/- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + </p>
+                     </div>
+                  </div>
+                  
+
+                  <div class="a41_top3"><!--2/4 columns-->
+                     
+                     
+                     <div class="r">
+                        <p></p>
+                        <p></p>
+                        <p></p> 
+                     </div>
+                     <div class="u">
+                        <p></p>
+                        <p></p>
+                        <p ></p>
+                     </div>
+                  </div>
+               </div><br>
+               
+              
+                  <div class="a42_cate2">
+                     <div class="x">
+                        <div class="txtx">
+                        <P style="color: #f69f12ee; font-size: 30px; font-family:Great Vibes; padding-bottom:4px; padding-top:5px;">50% Offer</P>
+                        <p style="color:rgb(16, 83, 16); font-family: Lucida fax; font-size: 26px; padding-bottom: 15px;"><b>Top Seeds</p>
+                        <a href="#" class="two_btnx">Shop Now <i class='bx bxs-right-arrow-alt'> </i></a>
+                        </div>
+                     </div>
+                     <div class="y">
+                        <div class="txtx">
+                        <P style="color: #f69f12ee; font-size: 30px; font-family:Great Vibes; padding-bottom:4px; padding-top:5px;">50% Offer</P>
+                        <p style="color:rgb(16, 83, 16); font-family: Lucida fax; font-size: 26px; padding-bottom: 15px;"><b>Pesticides and Insecticides</p>
+                        <a href="#" class="two_btnx">Shop Now <i class='bx bxs-right-arrow-alt'> </i></a>
+                        </div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="a43_cupb.">
+
+               </div>
+            </div>
+        
+      </div>
+      
+   </section>
+      <!--next page End-->
+       <!--third page start-->
+       <section class="last1">
+         <div class="txt11">
+            <div class="problemdefination"><img src="2.jpg"></div> 
+            <div class="problemdefination1">
+         
+         <h1 style="color:#063506; font-family: Lucida fax; font-size: 29px;">Problem Definition</h1><br><br>
+         
+         <p style="color:green; font-family: calibri; font-size: 20px; padding-bottom:9px;">farmer scheme aims to address key challenges faced by farmers, such as financial insecutity,limited access to technology, market volaitlity, and climate change impacts. These scheemes seek to improve farmers livelihoods by providing access to affordable credit,fair market prices, modern farming techlologies, climateresilient practices, and education</p><br>
+         </div>
+         </div>
+         </section>
+         <section class="last2">
+            <div class="txt12">
+               <div class="scopeofproject"><img src="scope.jpg"></div>
+               <div class="scopeofproject1">
+            
+            <h1 style="color:#063506; font-family: Lucida fax; font-size: 29px;">Scope Of Project</h1><br>
+            
+            <p style="color:green; font-family: calibri; font-size: 20px; padding-bottom:9px;">The scope of this project revolves around designing and implementing a comprehensive farmer support system through a digital platform.The main foucus is on empowering farmers,increasing agricultural productivy, and improving market access<li>Problem coverage</li><li>Features and Functionality</li><li>Beneficiaries</li><br>
+         </div>
+            </div>
+            </section>
+            <section class="last3">
+               <div class="txt13">
+                  <div class="advantages"><img src="adv3.avif"></div>
+                  <div class="advantages1">
+               
+               <h1 style="color:#063506; font-family: Lucida fax; font-size: 29px;">Advantages</h1><br><br>
+               
+               <p style="color:green; font-family: calibri; font-size: 20px; padding-bottom:9px;"><b>Food:</b> Provides sustenance.<br><br>
+                  <b>Jobs:</b> Supports economies.<br><br>
+                 <b>Materials:</b>  Supplies industries.<br><br>
+                 <b> Environment: </b>Can aid sustainability.<br><br>
+                 <b>Health: </b> Offers nutrition and well being.</p><br>
+            </div>
+               </div>
+               </section>
+               <section class="last4">
+                  <div class="txt14">
+                     <div class="disadvantages"><img src="disadv1.jpg"></div>
+                     <div class="disadvantages1">
+                  
+                  <h1 style="color:#063506; font-family: Lucida fax; font-size: 29px;">Disadvantages</h1><br>
+                  
+                  <p style="color:green; font-family: calibri; font-size: 18px; padding-bottom:9px;"><b>Environmental Damage:</b> Pollution, deforestation, soil erosion.<br>
+                     <b>Resource Depletion:</b> Water overuse, land degradation.<br>
+                     <b>Economic Volatility:</b>
+                     Market fluctuations, weather risks.<br>
+                     <b>Labor Challenges:</b> Hard work, potential exploitation.<br>
+                     <b>Health Risks:</b> Pesticide exposure, physical strain.</p><br>
+                 </div>
+                  </div>
+                  
+                     </section>
+                     <section class="last5">
+                        <div class="txt15">
+                           <div class="future"><img src="future.jpg"></div>
+                           <div class="future1">
+                        
+                        <h1 style="color:#063506; font-family: Lucida fax; font-size: 29px;">Future</h1><br>
+                      
+                        <p style="color:green; font-family: calibri; font-size: 20px; padding-bottom:9px;">Tech-driven: Precision, automation.<br>
+                           Sustainable: Less harm, climate-smart.<br>
+                           Efficient: More food, less waste.<br><br>In essence, the future farm will be:<br>
+
+                           More technologically advanced.<br>
+                           More environmentally sustainable.<br>
+                           More efficient and productive.</p><br>
+                        </div>
+                        </div>
+                        </section>            
+      
+       <!--third page End-->
+
+
+       
+       <!--Footer section-->
+       
+         <section class="footer">
+            <div class="foot1">
+               <div class="foot11">
+                  <div class="fcol1">
+                     <h1 style="margin-left:30px;margin-top: 20px; margin-bottom: 5px;">KrushiMitra</h1>
+                     <p style="font-size:12px;color: rgba(196, 193, 193, 0.974); margin-left:30px; margin-bottom: 10px;">It is a long established fact that a reader will be <br> distracted by the readable content.</p>
+                     <div class="ficons" style="margin-left: 30px; ">
+                        <a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'style="color: white;"></i></a>
+                        <a href="https://www.google.co.in/"><i class='bx bxl-google-plus-circle'style="color: white;" ></i></a>
+                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fexplore"><i class='bx bxl-twitter' style="color: white;"></i></a>
+                        <a href="https://www.instagram.com/"><i class='bx bxl-instagram' style="color: white;" ></i></a>
+                        <a href="https://in.pinterest.com/"><i class='bx bxl-pinterest' style="color: white;"></i></a>
+                     </div>
+                  </div>
+                  <div class="fcol2">
+                     <h3 style="margin-left: 7px; margin-bottom: 5px; margin-top: 20px;">About KrushiMitra</h3>
+                     <p style="font-size:12px;color: rgba(196, 193, 193, 0.974); margin-left:12px; margin-bottom: 5px;"><a href="aboutus.html" style="color: rgba(196, 193, 193, 0.974);">About us</a></p>
+                     <p style="font-size:12px;color: rgba(196, 193, 193, 0.974); margin-left:12px; margin-bottom: 5px;"><a href="contactus.html" style="color: rgba(196, 193, 193, 0.974);">Contact us</a></p>
+                     <p style="font-size:12px;color: rgba(196, 193, 193, 0.974); margin-left:12px; margin-bottom: 5px;"><a href="#" style="color: rgba(196, 193, 193, 0.974);">Terms & Conditions</a></p>
+                     <p style="font-size:12px;color: rgba(196, 193, 193, 0.974); margin-left:12px; margin-bottom: 5px;"><a href="#" style="color: rgba(196, 193, 193, 0.974);">Careers</a></p>
+                     <p style="font-size:12px;color: rgba(196, 193, 193, 0.974); margin-left:12px; margin-bottom: 5px;"><a href="http://localhost/The%20squad/Blog.php" style="color: rgba(196, 193, 193, 0.974);">Latest Blog</a></p>
+                  </div>
+                  <div class="fcol3">
+                     <h3 style="margin-left: 7px; margin-bottom: 5px;margin-top: 20px; ">Store Information</h3>
+                     <p style="font-size:13px;color: rgba(196, 193, 193, 0.974); margin-left:7px" class="bx bx-map">KrushiMitra,Nanded.</p><br>
+                     <p style="font-size:13px;color: rgba(196, 193, 193, 0.974); margin-left:7px" class="bx bx-phone-call">&nbsp Call us: 123-456-7890</p><br>
+                     <p style="font-size:13px;color: rgba(196, 193, 193, 0.974); margin-left:7px" class="bx bx-envelope">&nbsp Email Us: krushimitra@gamil.com</p><br>
+                     <p style="font-size:13px;color: rgba(196, 193, 193, 0.974); margin-left:7px" class="bx bx-printer">&nbsp Fax: 123456</p>
+                  </div>
+               </div><br><br>
+               <div class="foot12">
+                  <p style="font-size:14px; margin-left:35%;"><i class="fa fa-copyright" aria-hidden="true"></i>&nbsp @All Rights Reserved, Created by KrushiMitra</p>
+               </div>
+            </div>
+         </section>
+
+       <!--Footer section End-->
+       <script>
+         var countDownDate=new Date("March 5,2025 22:45:60").getTime();
+         var x=setInterval(function(){
+            var now=new Date().getTime();
+            var distance=countDownDate - now;
+
+            var days=Math.floor(distance/(1000*60*60*24));
+            var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+            var seconds=Math.floor((distance%(1000*60))/1000);
+
+            document.getElementById("days").innerHTML=days;
+            document.getElementById("hours").innerHTML=hours;
+            document.getElementById("minutes").innerHTML=minutes;
+            document.getElementById("seconds").innerHTML=seconds;
+
+            if(distance<0){
+               clearInterval(x);
+               document.getElementById("days").innerHTML="00";
+               document.getElementById("hours").innerHTML="00";
+               document.getElementById("minutes").innerHTML="00";
+               document.getElementById("seconds").innerHTML="00";
+            }
+         },1000);
+      </script>
+
+
+                
+                </body>    
+                </html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Support & Helpline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Refined Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;  /* Swapped to Inter for a modern feel */
+        }
+
+        .header {
+            background: linear-gradient(to right, #1E8E34, #15651C); /* Darker, more premium green */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+            animation: fadeIn 1s ease, slideInDown 0.5s ease;
+            background-image: url("green.webp");
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInDown {
+            from { transform: translateY(-60px); } /* Increased slide distance */
+            to { transform: translateY(0); }
+        }
+        .header h1 {
+            font-family: 'Poppins', sans-serif; /* Poppins for the heading remains */
+            letter-spacing: 0.8px;  /* Slightly wider letter spacing */
+            animation: pulse 2s infinite alternate;
+            color: #FFFFFF;
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.04); } /* Subtler pulse */
+        }
+        .header p {
+            font-family: 'Inter', sans-serif;
+            color: #F0F4C3; /* Off-white, softer tone */
+            font-weight: 500;  /* Medium font weight */
+        }
+        .nav-link {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+            color: #E6EE96; /* Softer green for nav links */
+        }
+        .nav-link:hover {
+            color: #FFF59D; /* A lighter yellow on hover, more premium */
+            transform: translateY(-3px); /* Slightly more pronounced hover effect */
+        }
+        .section-title {
+            font-family: 'Poppins', sans-serif; /* Keep Poppins for titles */
+            color: #1A5231; /* Even darker green for titles */
+            letter-spacing: 1px;  /* Increased letter spacing for emphasis */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08); /* Slightly stronger text shadow */
+            text-transform: uppercase;
+            font-size: 2.2rem; /* Larger title size */
+            animation: slideInLeft 0.7s ease;
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-120px); opacity: 0; } /* Increased slide distance */
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95); /* Slightly less transparent */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Even lighter border */
+            border-radius: 16px; /* More rounded cards */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Deeper shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.5s ease, zoomIn 0.5s ease;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.97); } /* Start closer to 1 */
+            to { transform: scale(1); }
+        }
+        .card:hover {
+            transform: translateY(-6px) scale(1.03); /* More pronounced hover effect */
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+        }
+        .card-title {
+            font-family: 'Poppins', sans-serif; /* Use Poppins for card titles */
+            color: #0E3D1E; /* Very dark, almost black green */
+            letter-spacing: 0.7px;
+            font-size: 1.5rem; /* Larger card title */
+            font-weight: 700;
+            margin-bottom: 1.2rem; /* Increased margin */
+        }
+        .btn {
+            font-family: 'Inter', sans-serif; /* Inter for buttons */
+            font-weight: 600;
+            border-radius: 12px; /* More rounded buttons */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added shadow transition */
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger button shadow */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 2rem; /* Slightly increased padding */
+            animation: pulseButton 1.5s infinite alternate;
+        }
+        @keyframes pulseButton {
+            from { transform: scale(1); }
+            to { transform: scale(1.03); } /* Subtler pulse */
+        }
+        .btn:hover {
+            background-color: #2E7D32; /* Darker green hover */
+            transform: translateY(-3px) scale(1.06); /* Increased scale on hover */
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow */
+        }
+        .btn:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Smaller active shadow */
+        }
+        .list-disc {
+            list-style-type: disc;
+            padding-left: 24px; /* Increased list indentation */
+        }
+        .list-inside {
+            list-style-position: inside;
+        }
+        .helpline-info {
+            background: rgba(255, 255, 255, 0.95); /* Slightly less transparent */
+            padding: 2.5rem; /* Increased padding */
+            border-radius: 16px; /* More rounded */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Deeper shadow */
+            margin-top: 1.5rem; /* Increased margin */
+            animation: fadeIn 1s ease, slideInRight 0.7s ease;
+            text-align: center; /* Center align helpline info */
+        }
+        @keyframes slideInRight {
+            from { transform: translateX(120px); opacity: 0; } /* Increased slide distance */
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .helpline-info i {
+            color: #1E8E34; /* Darker green icon */
+            margin-right: 1rem; /* Increased icon margin */
+            font-size: 1.5rem; /* Larger icon */
+        }
+        .footer {
+            background: #0E3D1E; /* Very dark green footer */
+            color: #F0F4C3; /* Off-white footer text */
+            padding: 2rem 0; /* Increased footer padding */
+            text-align: center;
+            border-top: 2px solid #1A5231; /* Darker border */
+            border-radius: 12px 12px 0 0; /* More rounded top corners */
+            animation: fadeIn 1s ease, slideInUp 0.5s ease;
+        }
+        @keyframes slideInUp {
+            from { transform: translateY(60px); opacity: 0; } /* Increased slide distance */
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .service-card {
+            background-color: #FFFFFF;
+            border-radius: 16px; /* More rounded cards */
+            padding: 2.5rem; /* Increased padding */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.5s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-8px); /* Increased hover effect */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow */
+        }
+        .service-card h3 {
+            font-size: 1.8rem; /* Larger heading */
+            margin-bottom: 1.5rem; /* Increased margin */
+            color: #0E3D1E; /* Very dark green */
+            font-family: 'Poppins', sans-serif; /* Use Poppins for service card titles */
+            letter-spacing: 0.5px;
+        }
+        .service-card p {
+            font-size: 1.2rem; /* Larger paragraph text */
+            color: #388E3C; /* Darker green paragraph text */
+            margin-bottom: 2rem; /* Increased margin */
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8; /* Increased line height for better readability */
+        }
+        .service-card ul {
+            list-style-type: disc;
+            padding-left: 28px; /* Increased list indentation */
+            margin-bottom: 2rem; /* Increased margin */
+            color: #388E3C;
+            font-family: 'Inter', sans-serif;
+        }
+        .service-card li{
+             margin-bottom: 0.8rem; /* Increased list item margin */
+             font-size: 1.1rem;
+        }
+        .section-intro{
+            font-size: 1.3rem; /* Larger intro text */
+            color: #4A5568; /* Darker gray intro text */
+            margin-bottom: 2rem; /* Increased margin */
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            line-height: 1.9; /* Increased line height */
+            font-weight: 500; /* Medium font weight */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans">
+    <header class="header text-white py-6 shadow-md sticky top-0 z-10 rounded-b-md">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <h1 class="text-4xl font-bold">Farmer Support & Helpline</h1>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#services" class="nav-link hover:text-yellow-100">Services</a></li>
+                        <li><a href="#helpline" class="nav-link hover:text-yellow-100">Helpline</a></li>
+                        <li><a href="#about" class="nav-link hover:text-yellow-100">About</a></li>
+                        <li><a href="home.html" >Home</a></li>
+                    </ul>
+                </nav>
+                <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-95 z-20 backdrop-blur-md">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-8 rounded-l-lg shadow-xl">
+            <div class="flex justify-end mb-6">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-6">
+                    <li><a href="#services" class="block text-lg text-white hover:text-yellow-100 transition duration-300">Services</a></li>
+                    <li><a href="#helpline" class="block text-lg text-white hover:text-yellow-100 transition duration-300">Helpline</a></li>
+                     <li><a href="#about" class="block text-lg text-white hover:text-yellow-100 transition duration-300">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-6 py-10">
+        <section id="services" class="mb-16">
+            <h2 class="section-title text-3xl font-semibold text-center mb-8">Our Services</h2>
+            <p class="section-intro">We provide a comprehensive range of services to support our farmers, helping them thrive and succeed.  From expert advice to essential resources, we are committed to empowering our agricultural community.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card">
+                    <h3 class="card-title">Expert Consultation</h3>
+                    <p>Connect with our experienced agronomists for personalized advice.</p>
+                    <ul>
+                        <li>Crop planning</li>
+                        <li>Soil analysis</li>
+                        <li>Pest management</li>
+                        <li>Disease control</li>
+                        <li>Irrigation optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3 class="card-title">Financial Assistance</h3>
+                    <p>Access information on loans, subsidies, and insurance schemes.</p>
+                     <ul>
+                        <li>Loan application guidance</li>
+                        <li>Subsidy program details</li>
+                        <li>Insurance claim support</li>
+                        <li>Credit counseling</li>
+                        <li>Investment advice</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3 class="card-title">Market Information</h3>
+                    <p>Stay updated with the latest market prices and trends.</p>
+                    <ul>
+                        <li>Daily price updates</li>
+                        <li>Market analysis reports</li>
+                        <li>Buyer-seller connections</li>
+                        <li>Price forecasting</li>
+                        <li>Export/Import guidance</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3 class="card-title">Training Programs</h3>
+                    <p>Enhance your skills with our workshops and training sessions.</p>
+                    <ul>
+                        <li>Modern farming techniques</li>
+                        <li>Sustainable agriculture</li>
+                        <li>Organic farming methods</li>
+                        <li>Precision farming</li>
+                        <li>Farm management</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3 class="card-title">Equipment Rental</h3>
+                    <p>Rent high-quality farming equipment at affordable rates.</p>
+                    <ul>
+                        <li>Tractors and ploughs</li>
+                        <li>Harvesters and combines</li>
+                        <li>Irrigation systems</li>
+                        <li>Specialized machinery</li>
+                        <li>Maintenance services</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3 class="card-title">Seed and Fertilizer Supply</h3>
+                    <p>Get access to certified seeds and quality fertilizers.</p>
+                    <ul>
+                        <li>High-yield variety seeds</li>
+                        <li>Organic fertilizers</li>
+                        <li>Soil testing services</li>
+                        <li>Customized nutrient plans</li>
+                        <li>Seed treatment options</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="helpline" class="mb-16 text-center">
+            <h2 class="section-title text-3xl font-semibold mb-8">24/7 Helpline</h2>
+            <p class="text-gray-700 text-lg mb-6">Need immediate assistance?  Contact our helpline anytime:</p>
+            <div class="helpline-info inline-block">
+                <ul class="list-none text-gray-600">
+                    <li class="mb-3"><i class="fas fa-phone"></i> Phone: 1800-123-4567</li>
+                    <li class="mb-3"><i class="fas fa-envelope"></i> Email: support@farmershelpline.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Address: Krishi Bhavan, New Delhi, India</li>
+                </ul>
+                <p class="mt-4 text-md font-medium text-green-600">We are available 24/7 to assist you.</p>
+            </div>
+        </section>
+
+        <section id="about" class="mb-16">
+            <h2 class="section-title text-3xl font-semibold text-center mb-8">About Us</h2>
+            <p class="text-gray-700 text-lg text-center">
+                We are a dedicated organization committed to the welfare and progress of our farming community. Our mission is to empower farmers with the knowledge, resources, and support they need to achieve sustainable and profitable agriculture. We strive to be a reliable partner in their journey towards prosperity.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Farmer Support & Helpline. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 150 && window.scrollY < sectionTop + sectionHeight - 150) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').slice(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

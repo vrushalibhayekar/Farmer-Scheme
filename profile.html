@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Profile</title>
+    <style>
+        body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    background-color: #f4f4f4; background-image: linear-gradient(white, rgba(207, 236, 218, 0.312)), url("green.webp");
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header button {
+    padding: 10px 15px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+header button:hover {
+    background-color: #b71c1c;
+}
+
+#profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-picture {
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.details p {
+    margin: 5px 0;
+}
+
+#farm-details,
+#other-info {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+#farm-details h2,
+#other-info h2 {
+    margin-top: 0;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Add more styling as needed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Farmer Profile</h1>
+            <button id="logoutBtn">Logout</button>
+        </header>
+
+        <section id="profile-info">
+            <div class="profile-picture">
+                <img id="profileImage" src="default-profile.png" alt="Profile Picture">
+                </div>
+            <div class="details">
+                <h2 id="farmerName">Loading...</h2>
+                <p><strong>Farmer ID:</strong> <span id="farmerId">Loading...</span></p>
+                <p><strong>Email:</strong> <span id="farmerEmail">Loading...</span></p>
+                <p><strong>Phone:</strong> <span id="farmerPhone">Loading...</span></p>
+                <p><strong>Address:</strong> <span id="farmerAddress">Loading...</span></p>
+                <p><strong>Farm Name:</strong> <span id="farmName">Loading...</span></p>
+                <p><strong>Crops Grown:</strong> <span id="cropsGrown">Loading...</span></p>
+                </div>
+        </section>
+
+        <section id="farm-details">
+            <h2>Farm Details</h2>
+            <p><strong>Total Area:</strong> <span id="totalArea">Loading...</span></p>
+            <p><strong>Location:</strong> <span id="farmLocation">Loading...</span></p>
+            </section>
+
+        <section id="other-info">
+            <h2>Other Information</h2>
+            <p><strong>Registration Date:</strong> <span id="registrationDate">Loading...</span></p>
+            </section>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const farmerNameElement = document.getElementById('farmerName');
+    const farmerIdElement = document.getElementById('farmerId');
+    const farmerEmailElement = document.getElementById('farmerEmail');
+    const farmerPhoneElement = document.getElementById('farmerPhone');
+    const farmerAddressElement = document.getElementById('farmerAddress');
+    const farmNameElement = document.getElementById('farmName');
+    const cropsGrownElement = document.getElementById('cropsGrown');
+    const totalAreaElement = document.getElementById('totalArea');
+    const farmLocationElement = document.getElementById('farmLocation');
+    const registrationDateElement = document.getElementById('registrationDate');
+    const profileImageElement = document.getElementById('profileImage');
+    const logoutButton = document.getElementById('logoutBtn');
+
+    // --- SIMULATING FETCHING DATA FROM THE SERVER ---
+    // In a real application, this data would be dynamically provided by the server
+    // or fetched using an API call after the page loads.
+    const farmerData = {
+        name: "John Doe",
+        id: "FD12345",
+        email: "john.doe@example.com",
+        phone: "+91 9876543210",
+        address: "123 Main Street, Village Name, District",
+        farmName: "Green Acres Farm",
+        cropsGrown: "Wheat, Rice, Corn",
+        totalArea: "10 hectares",
+        location: "Near River Valley",
+        registrationDate: "2023-05-15",
+        profileImageUrl: "farmer-john.jpg" // Replace with actual image path
+    };
+
+    // Update the HTML elements with the fetched data
+    if (farmerData) {
+        farmerNameElement.textContent = farmerData.name;
+        farmerIdElement.textContent = farmerData.id;
+        farmerEmailElement.textContent = farmerData.email;
+        farmerPhoneElement.textContent = farmerData.phone;
+        farmerAddressElement.textContent = farmerData.address;
+        farmNameElement.textContent = farmerData.farmName;
+        cropsGrownElement.textContent = farmerData.cropsGrown;
+        totalAreaElement.textContent = farmerData.totalArea;
+        farmLocationElement.textContent = farmerData.location;
+        registrationDateElement.textContent = farmerData.registrationDate;
+        profileImageElement.src = farmerData.profileImageUrl;
+    } else {
+        // Handle the case where farmer data couldn't be loaded
+        farmerNameElement.textContent = "Error loading data";
+    }
+
+    // Logout functionality (basic example - needs server-side implementation)
+    logoutButton.addEventListener('click', function() {
+        // In a real application, this would involve:
+        // 1. Making an API call to the server to invalidate the session.
+        // 2. Redirecting the user back to the login page.
+        alert("Logout functionality needs server-side implementation.");
+        window.location.href = 'login.html'; // Redirect to login page (you'd need a login.html)
+    });
+});
+</script>
+</body>
+</html>

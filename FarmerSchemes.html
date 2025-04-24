@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Government Schemes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        /* Custom styles for header to ensure it stands out */
+        .header {
+            background: linear-gradient(to right, #68d391, #28a745); /* Gradient background */
+            animation: fadeIn 1s ease-in-out, slideInDown 0.5s ease-out;
+            background-image:url("green.webp");
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInDown {
+            from { transform: translateY(-50px); }
+            to { transform: translateY(0); }
+        }
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            animation: pulse 2s infinite alternate;
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+        .header p {
+            font-family: 'Poppins', sans-serif;
+        }
+        .nav-link {
+            font-family: 'Poppins', sans-serif;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #1e7e34; /* Darker shade of green */
+            transform: translateY(-2px);
+        }
+        .scheme-card {
+            font-family: 'Poppins', sans-serif;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .scheme-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        .scheme-card h3 {
+            background: linear-gradient(to right, #f0fdf4, #d4f4e3);
+            -webkit-background-clip: text;
+            color:green;
+        }
+        .apply-button {
+            background-color: #48bb78; /* A brighter shade of green */
+            background-image: url("green.webp");
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .apply-button:hover {
+            background-color: #38a169; /* An even darker shade */
+            transform: scale(1.05);
+        }
+        .alert-box {
+            background-color: #fefcbf;
+            border-left-color: #f0e08c;
+            color: #6b5e0b;
+            padding: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="header text-white py-6 px-4 rounded-b-lg shadow-md sticky top-0 z-10">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-semibold mb-2">Farmer Government Schemes</h1>
+            <p class="text-lg">Empowering Farmers, Enriching the Nation</p>
+        </div>
+    </header>
+
+    <nav class="bg-green-100 py-4 shadow-md">
+        <div class="container mx-auto flex justify-center space-x-6">
+            <a href="#schemes" class="nav-link text-green-600 hover:text-green-800 transition duration-300">Schemes</a>
+            <a href="#eligibility" class="nav-link text-green-600 hover:text-green-800 transition duration-300">Eligibility</a>
+            <a href="#apply" class="nav-link text-green-600 hover:text-green-800 transition duration-300">How to Apply</a>
+            <a href="#contact" class="nav-link text-green-600 hover:text-green-800 transition duration-300">Contact Us</a>
+            <a href="home.html" class="nav-link text-green-600 hover:text-green-800 transition duration-300">Home</a>
+        </div>
+    </nav>
+
+    <section id="schemes" class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-semibold text-green-700 text-center mb-8">Featured Schemes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="scheme-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                <h3 class="text-xl font-semibold text-green-600 mb-4">Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)</h3>
+                <p class="text-gray-700 mb-4">Financial assistance to small and marginal farmers.</p>
+                <ul class="list-disc list-inside text-gray-600 mb-4">
+                    <li>Provides income support of ₹6,000 per year.</li>
+                    <li>Distributed in three equal installments.</li>
+                    <li>Helps farmers meet agricultural needs.</li>
+                </ul>
+                <a href="https://pmkisan.gov.in/" class="apply-button">Learn More</a>
+            </div>
+            <div class="scheme-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                <h3 class="text-xl font-semibold text-green-600 mb-4">Pradhan Mantri Fasal Bima Yojana (PMFBY)</h3>
+                <p class="text-gray-700 mb-4">Crop insurance scheme for farmers.</p>
+                <ul class="list-disc list-inside text-gray-600 mb-4">
+                    <li>Provides insurance coverage for crop loss.</li>
+                    <li>Covers losses due to natural calamities.</li>
+                    <li>Aims to stabilize farm income.</li>
+                </ul>
+                <a href="https://pmfby.gov.in/" class="apply-button">Learn More</a>
+            </div>
+            <div class="scheme-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                <h3 class="text-xl font-semibold text-green-600 mb-4">Kisan Credit Card (KCC)</h3>
+                <p class="text-gray-700 mb-4">Provides Timely Credit</p>
+                <ul class="list-disc list-inside text-gray-600 mb-4">
+                    <li>Simplified and Flexible Processes.</li>
+                    <li>Low Interest Rates with Government Support.</li>
+                    <li>Helps farmers purchase inputs.</li>
+                </ul>
+                <a href="https://www.myscheme.gov.in/schemes/kcc" class="apply-button">Learn More</a>
+            </div>
+            <div class="scheme-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                <h3 class="text-xl font-semibold text-green-600 mb-4">Pradhan Mantri Kisan MaanDhan Yojana (PM-KMY)</h3>
+                <p class="text-gray-700 mb-4">  pension to small and marginal farmers after age 60.</p>
+                <ul class="list-disc list-inside text-gray-600 mb-4">
+                    <li>Farmers (18-40 yrs) contribute a small monthly amount, matched equally by the government.</li>
+                    <li>Spouse gets 50% of the pension upon the farmer's death.</li>
+                    <li> Aims to provide financial stability and social security to vulnerable farmers in their old age.</li>
+                </ul>
+                <a href="https://maandhan.in/" class="apply-button">Learn More</a>
+            </div>
+            <div class="scheme-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                <h3 class="text-xl font-semibold text-green-600 mb-4">Agriculture Infrastructure Fund (AIF)</h3>
+                <p class="text-gray-700 mb-4">Financial Support for Agri Infrastructure</p>
+                <ul class="list-disc list-inside text-gray-600 mb-4">
+                    <li>Interest Subvention and Credit Guarantee</li>
+                    <li>Wide Range of Eligible Beneficiaries.</li>
+                    <li>Focus on Reducing Post-Harvest Losses and Enhancing Income.</li>
+                </ul>
+                <a href="https://pib.gov.in/PressNoteDetails.aspx?NoteId=152061&ModuleId=3&reg=3&lang=1" class="apply-button">Learn More</a></div>
+                <div class="scheme-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold text-green-600 mb-4">Micro Irrigation Fund (MIF)</h3>
+                    <p class="text-gray-700 mb-4">Dedicated Fund for Micro Irrigation</p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        <li>Financial Assistance to States</li>
+                        <li>Top-up Subsidies and Innovative Projects.</li>
+                        <li>Enhancing Water Use Efficiency</li>
+                    </ul>
+                    <a href="https://www.nabard.org/content1.aspx?id=1720&catid=8&mid=8" class="apply-button">Learn More</a>
+        </div>
+    </section>
+
+    <section id="eligibility" class="bg-green-100 py-10 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-green-700 text-center mb-8">Eligibility Criteria</h2>
+            <ul class="list-disc list-inside text-gray-700 text-lg">
+                <li>Must be an Indian citizen.</li>
+                <li>Must be actively involved in agricultural activities.</li>
+                <li>Land ownership requirements may vary by scheme.</li>
+                <li>Specific schemes may target small and marginal farmers.</li>
+                <li>Other criteria may apply as per the specific scheme guidelines.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="apply" class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-semibold text-green-700 text-center mb-8">How to Apply</h2>
+        <ol class="list-decimal list-inside text-gray-700 text-lg space-y-4">
+            <li>Visit the official government agriculture website.</li>
+            <li>Identify the specific scheme you wish to apply for.</li>
+            <li>Check the eligibility criteria and required documents.</li>
+            <li>Fill out the application form accurately.</li>
+            <li>Submit the required documents.</li>
+            <li>Follow up with the concerned authorities for application status.</li>
+        </ol>
+        <div class="mt-8 text-center alert-box" role="alert">
+          <p class="font-bold">Important Note:</p>
+          <p>Application procedures may vary. Please refer to the official scheme guidelines for the most accurate and up-to-date information.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-green-100 py-10 px-4 rounded-t-lg shadow-md">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-semibold text-green-700 mb-6">Contact Us</h2>
+            <p class="text-lg text-gray-700 mb-4">For any queries or assistance, please reach out to the following:</p>
+            <p class="text-lg text-green-600 font-semibold">Email: support@farmergovschemes.gov.in</p>
+            <p class="text-lg text-green-600 font-semibold">Phone: 1800-180-1551</p>
+            <p class="text-md text-gray-500 mt-4">Office Address: Ministry of Agriculture & Farmers Welfare, New Delhi, India</p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <p>© 2024 Farmer Government Schemes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

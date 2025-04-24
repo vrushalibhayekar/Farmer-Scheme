@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Loans & Subsides</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Refined Custom Styles */
+        .header {
+            background: linear-gradient(to right, #66BB6A, #43A047);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease, slideInDown 0.5s ease;
+            background-image: url("green.webp");
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInDown {
+            from { transform: translateY(-50px); }
+            to { transform: translateY(0); }
+        }
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.5px;
+            animation: pulse 2s infinite alternate;
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.06); }
+        }
+        .header p {
+            font-family: 'Poppins', sans-serif;
+            color: #E0F2F1;
+        }
+        .nav-link {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #E6EE96;
+            transform: translateY(-2px);
+        }
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            color: #388E3C;
+            letter-spacing: 0.8px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            animation: slideInLeft 0.7s ease;
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.5s ease, zoomIn 0.5s ease;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.95); }
+            to { transform: scale(1); }
+        }
+        .card:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            font-family: 'Poppins', sans-serif;
+            color: #2E7D32;
+            letter-spacing: 0.6px;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .btn {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            animation: pulseButton 1.5s infinite alternate;
+        }
+        @keyframes pulseButton {
+            from { transform: scale(1); }
+            to { transform: scale(1.08); }
+        }
+        .btn:hover {
+            background-color: #4CAF50;
+            transform: translateY(-2px) scale(1.1);
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+        }
+        .btn:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .list-disc {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .list-inside {
+            list-style-position: inside;
+        }
+        .contact-info {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            margin-top: 1rem;
+            animation: fadeIn 1s ease, slideInRight 0.7s ease;
+        }
+        @keyframes slideInRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .contact-info i {
+            color: #4CAF50;
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+        .footer {
+            background: #333;
+            color: #eee;
+            padding: 1.5rem 0;
+            text-align: center;
+            border-top: 1px solid #4a5568;
+            border-radius: 8px 8px 0 0;
+            animation: fadeIn 1s ease, slideInUp 0.5s ease;
+        }
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans">
+    <header class="header text-white py-4 shadow-md sticky top-0 z-10 rounded-b-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold">Farmer Loans & Subsides</h1>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#loans" class="nav-link hover:text-yellow-100">Loans</a></li>
+                        <li><a href="#subsidies" class="nav-link hover:text-yellow-100">Subsidies</a></li>
+                        <li><a href="#contact" class="nav-link hover:text-yellow-100">Contact</a></li>
+                        <li><a href="home.html" >Home</a></li>
+                    </ul>
+                </nav>
+                <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-95 z-20 backdrop-blur-md">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6 rounded-l-lg shadow-xl">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="#loans" class="block text-lg text-white hover:text-yellow-100 transition duration-300">Loans</a></li>
+                    <li><a href="#subsidies" class="block text-lg text-white hover:text-yellow-100 transition duration-300">Subsidies</a></li>
+                    <li><a href="#contact" class="block text-lg text-white hover:text-yellow-100 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="loans" class="mb-12">
+            <h2 class="section-title text-2xl font-semibold text-center mb-6">Farmer Loan Schemes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card bg-white rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="card-title text-xl font-semibold mb-4">Kisan Credit Card (KCC)</h3>
+                    <p class="text-gray-700 mb-4">Provides farmers with timely and adequate credit for their farming needs.</p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        <li>Loan up to ₹3 lakh</li>
+                        <li>Low interest rates</li>
+                        <li>Flexible repayment</li>
+                    </ul>
+                    <a href="https://www.myscheme.gov.in/schemes/kcc" class="btn bg-green-500 hover:bg-emerald-600 text-white font-bold focus:outline-none focus:shadow-outline text-center">Learn More</a>
+                </div>
+                <div class="card bg-white rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="card-title text-xl font-semibold mb-4">Agriculture Loan Waiver</h3>
+                    <p class="text-gray-700 mb-4">State-specific schemes that waive off agricultural loans in certain conditions.</p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        <li>Relief for distressed farmers</li>
+                        <li>State government initiatives</li>
+                        <li>Eligibility varies</li>
+                    </ul>
+                    <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/farm-loan-waivers-in-india" class="btn bg-green-500 hover:bg-emerald-600 text-white font-bold focus:outline-none focus:shadow-outline text-center">Learn More</a>
+                </div>
+                <div class="card bg-white rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="card-title text-xl font-semibold mb-4">NABARD Loans</h3>
+                    <p class="text-gray-700 mb-4">Provides refinance support for agriculture and rural development.</p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        <li>Long-term loans</li>
+                        <li>Various schemes</li>
+                        <li>Supports rural infrastructure</li>
+                    </ul>
+                    <a href="https://www.nabard.org/content1.aspx?id=548&catid=8&mid=8" class="btn bg-green-500 hover:bg-emerald-600 text-white font-bold focus:outline-none focus:shadow-outline text-center">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="subsidies" class="mb-12">
+            <h2 class="section-title text-2xl font-semibold text-center mb-6">Government Subsidies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card bg-white rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="card-title text-xl font-semibold mb-4">PM-KISAN</h3>
+                    <p class="text-gray-700 mb-4">Provides income support to small and marginal farmer families across the country.</p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        <li>₹6,000 per year</li>
+                        <li>Direct bank transfer</li>
+                        <li>For eligible farmers</li>
+                    </ul>
+                    <a href="https://pmkisan.gov.in/" class="btn bg-green-500 hover:bg-emerald-600 text-white font-bold focus:outline-none focus:shadow-outline text-center">Learn More</a>
+                </div>
+                <div class="card bg-white rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="card-title text-xl font-semibold mb-4">Fertilizer Subsidies</h3>
+                    <p class="text-gray-700 mb-4">Reduces the cost of fertilizers for farmers.</p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        <li>Lower input costs</li>
+                        <li>Increased affordability</li>
+                        <li>Boosts production</li>
+                    </ul>
+                    <a href="https://www.fert.nic.in/fertilizer-subsidy" class="btn bg-green-500 hover:bg-emerald-600 text-white font-bold focus:outline-none focus:shadow-outline text-center">Learn More</a>
+                </div>
+                <div class="card bg-white rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="card-title text-xl font-semibold mb-4">Irrigation Subsidies</h3>
+                    <p class="text-gray-700 mb-4">Supports farmers in adopting efficient irrigation methods.</p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        <li>Drip irrigation</li>
+                        <li>Sprinkler systems</li>
+                        <li>Water conservation</li>
+                    </ul>
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0378377421005618" class="btn bg-green-500 hover:bg-emerald-600 text-white font-bold focus:outline-none focus:shadow-outline text-center">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="mb-12 text-center">
+            <h2 class="section-title text-2xl font-semibold mb-6">Contact Us</h2>
+            <p class="text-gray-700 text-lg mb-4">For any inquiries or assistance, please reach out to us:</p>
+            <div class="contact-info inline-block">
+                <ul class="list-none text-gray-600">
+                    <li class="mb-2"><i class="fas fa-phone"></i> Phone: +91 1234567890</li>
+                    <li class="mb-2"><i class="fas fa-envelope"></i> Email: support@farmersportal.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Address: 123, Farmer's Street, AgriCity, India</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Farmer Support Portal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').slice(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

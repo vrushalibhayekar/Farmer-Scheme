@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            background-image: linear-gradient(white, rgba(207, 236, 218, 0.312)), url("green.webp");
+        }
+
+        .team-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .member {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background-color: white;
+            transition: box-shadow 0.5s ease; /* Add transition for smooth effect */
+        }
+        
+        .member:hover {
+            box-shadow: 0 4px 8px black; /* Shadow on hover */
+        }
+
+        .member h2 {
+            margin-bottom: 5px;
+        }
+
+        .member p {
+            margin-top: 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="team-container">
+        <div class="member">
+            <img src="vrushali1.jpg" height="300px", width="300px">
+            <h2>Vrushali Bhayekar</h2>
+            <p>Developer</p>
+        </div>
+        <div class="member">
+            <img src="namrata.jpg", height="300px", width="275px">
+            <h2>Namrata Surawar</h2>
+            <p>Info.Gatherer</p>
+        </div>
+    </div>
+</body>
+</html>
